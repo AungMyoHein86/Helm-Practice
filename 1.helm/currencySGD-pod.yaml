@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: currency-sgd-app
+  labels:
+    app: sgd-microservice
+spec:
+  containers:
+  - name: currency-SGD
+    image: hashicorp/http-echo:0.2.3
+    args:
+      - "-text=feature available in SGD"
+      - -listen=:8082
